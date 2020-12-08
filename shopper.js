@@ -1,15 +1,21 @@
 var shopper = {
     firstName: 'Jeff',
-    lastName: 'Smith',
-    age: 27,
-    isShopping: true,
-    fullname: function() {
-        return this.firstName + " " + this.lastName;
-    }
-    
-    
+    canAdd: true,
+}
+
+var item = function(name, price, count) {
+    this.name = name
+    this.price = price
+    this.count = count
 };
-shopper.shoppingcart = ['Apple', 'Pear', 'Lasanga', 'Ham']
+
+shoppingcart = []
+
+function addItemToShoppingcart(name, price, count) {
+    item = new item(name, price, count);
+    shoppingcart.push(item);
+}
+addItemToShoppingcart("Apple", 2.11, 6);
 
 
-console.log(shopper)
+console.log(shoppingcart)
